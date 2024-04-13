@@ -25,7 +25,6 @@ const (
 var db *sql.DB
 
 func main() {
-	fmt.Println("Hello World!")
 	connectionString := fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=disable", host, port, user, password, dbname)
 	var err error
 	db, err = sql.Open("postgres", connectionString)
@@ -36,8 +35,8 @@ func main() {
 
 	router := mux.NewRouter()
 	router.HandleFunc("/products", getProducts).Methods("GET")
-	router.HandleFunc("/products", createProduct).Methods("POST")
-	router.HandleFunc("/products/{id}", updateProduct).Methods("PUT")
+	router.HandleFunc("/products/create", createProduct).Methods("POST")
+	router.HandleFunc("/products/{id}", updateProduct).Methods("POST")
 
 	log.Println("Server started on port 5433")
 	log.Fatal(http.ListenAndServe(":5433", router))

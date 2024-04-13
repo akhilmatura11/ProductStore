@@ -20,7 +20,6 @@ import com.productstore.domain.ResponseStatus
 import com.productstore.domain.UpdateType
 import com.productstore.presentation.productList.ProductViewModel
 import java.io.InputStream
-import kotlin.reflect.KParameter
 
 
 class UpdateProductDetailFragment : Fragment() {
@@ -83,7 +82,7 @@ class UpdateProductDetailFragment : Fragment() {
                 productName.text.toString(),
                 productDescription.text.toString(),
                 imageData,
-                productPrice.text.toString().replace("S$ ", "").toDouble(),
+                productPrice.text.toString().replace("S$", "").trim().toDouble(),
                 productCategory.text.toString()
             )
             updateProduct(newProduct)

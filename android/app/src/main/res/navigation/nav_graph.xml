@@ -17,6 +17,7 @@
             android:id="@+id/action_productListFragment_to_addProductFragments"
             app:destination="@+id/updateProductDetailFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/productDetailFragment"
         android:name="com.productstore.presentation.productDetail.ProductDetailFragment"
@@ -29,6 +30,7 @@
             android:name="productEntity"
             app:argType="com.productstore.data.localDataSource.ProductEntity" />
     </fragment>
+
     <fragment
         android:id="@+id/updateProductDetailFragment"
         android:name="com.productstore.presentation.productDetail.UpdateProductDetailFragment"

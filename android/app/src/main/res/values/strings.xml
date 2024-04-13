@@ -13,6 +13,7 @@
     <string name="action_add_product">Add Product</string>
     <string name="action_add_image">Add Image</string>
     <string name="action_choose_image">Choose Image</string>
+
     <string name="empty_product_list">No products. Add products on the store.</string>
     <string name="all_fields_mandatory">All fields are mandatory for adding product.</string>
     <string name="no_change_in_data">No change in data fields for the product.</string>

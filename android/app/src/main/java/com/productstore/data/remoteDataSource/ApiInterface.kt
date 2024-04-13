@@ -11,16 +11,16 @@ import retrofit2.http.Path
 
 interface ApiInterface {
 
-    @GET("products")
+    @GET("/products")
     suspend fun fetchProduct(): List<ProductEntity>
 
-    @PUT("products/{id}")
+    @PUT("/products/{id}")
     suspend fun updateProduct(
         @Path("id") id: Int,
         @Body productEntity: ProductEntity
     ): Response<ResponseBody>
 
-    @POST("products")
+    @POST("/products")
     suspend fun createProduct(
         @Body productEntity: ProductEntity
     ): Response<ResponseBody>

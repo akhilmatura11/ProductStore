@@ -19,6 +19,7 @@
             android:layout_width="@dimen/grid_view_image_size"
             android:layout_height="@dimen/grid_view_image_size"
             android:scaleType="fitXY"
+            android:src="@drawable/add_a_photo"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"

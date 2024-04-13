@@ -20,18 +20,18 @@
             android:layout_marginEnd="@dimen/dimen_small"
             android:padding="@dimen/dimen_very_small"
             android:src="@drawable/sort"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/search_view"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:ignore="ContentDescription" />
 
         <SearchView
             android:id="@+id/search_view"
             android:layout_width="0dp"
-            android:queryHint="Search Here"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/sort_icon"
+            android:queryHint="Search Here"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/sort_icon"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

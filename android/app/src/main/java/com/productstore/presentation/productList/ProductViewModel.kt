@@ -50,11 +50,10 @@ class ProductViewModel @Inject constructor(
         updateType: UpdateType
     ): Boolean {
         return if (updateType == UpdateType.ADD_PRODUCT) {
-            oldProduct.name.isNotBlank()
-                    && oldProduct.description.isNotBlank()
-                    && oldProduct.category.isNotBlank()
-                    && oldProduct.price >= 0.0
-                    && oldProduct.image.isNotBlank()
+            newProduct.name.isNotBlank()
+                    && newProduct.description.isNotBlank()
+                    && newProduct.category.isNotBlank()
+                    && newProduct.price >= 0.0
         } else {
             oldProduct.name != newProduct.name
                     || oldProduct.description != newProduct.description
