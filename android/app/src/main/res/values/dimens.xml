@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimen_very_small">4dp</dimen>
+    <dimen name="dimen_small">8dp</dimen>
+    <dimen name="dimen_medium">12dp</dimen>
+    <dimen name="dimen_normal">16dp</dimen>
+    <dimen name="dimen_large">16dp</dimen>
+
+    <dimen name="text_14_sp">14sp</dimen>
+    <dimen name="text_16_sp">16sp</dimen>
+
+    <dimen name="grid_view_image_size">200dp</dimen>
+    <dimen name="image_size">372dp</dimen>
+</resources>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="productEntity"
+            type="com.productstore.data.localDataSource.ProductEntity" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dimen_normal"
+        tools:context=".presentation.productDetail.ProductDetailFragment">
+
+        <TextView
+            android:id="@+id/product_detail_name"
+            style="@style/TextAppearance.MaterialComponents.Headline6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{productEntity.name}"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/product_detail_image"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_marginTop="@dimen/dimen_normal"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_name"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/product_detail_price_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_normal"
+            android:layout_marginEnd="@dimen/dimen_very_small"
+            android:text="@string/label_price"
+            android:textSize="@dimen/text_16_sp"
+            app:layout_constraintEnd_toStartOf="@id/product_detail_price"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_image" />
+
+        <TextView
+            android:id="@+id/product_detail_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_normal"
+            android:text="@{productEntity.formattedPrice()}"
+            android:textSize="@dimen/text_16_sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_image" />
+
+        <TextView
+            android:id="@+id/product_detail_category_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small"
+            android:layout_marginEnd="@dimen/dimen_very_small"
+            android:text="@string/label_category"
+            android:textSize="@dimen/text_16_sp"
+            app:layout_constraintEnd_toStartOf="@id/product_detail_category"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_price_title" />
+
+        <TextView
+            android:id="@+id/product_detail_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_normal"
+            android:text="@{productEntity.category}"
+            android:textSize="@dimen/text_16_sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_price_title" />
+
+        <TextView
+            android:id="@+id/product_detail_description_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_small"
+            android:text="@{productEntity.description}"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_category_title" />
+
+        <Button
+            android:id="@+id/product_edit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_normal"
+            android:paddingHorizontal="@dimen/dimen_normal"
+            android:text="@string/action_edit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/product_detail_description_title" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

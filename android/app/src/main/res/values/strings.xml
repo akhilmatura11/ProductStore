@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">ProductStore</string>
+
+    <string name="label_name">Name</string>
+    <string name="label_description">Description</string>
+    <string name="label_price">Price</string>
+    <string name="label_category">Category</string>
+
+    <string name="action_update">UPDATE</string>
+    <string name="action_add">ADD</string>
+    <string name="action_edit">EDIT</string>
+    <string name="action_update_product">Update Product</string>
+    <string name="action_add_product">Add Product</string>
+    <string name="action_add_image">Add Image</string>
+    <string name="action_choose_image">Choose Image</string>
+    <string name="empty_product_list">No products. Add products on the store.</string>
+    <string name="all_fields_mandatory">All fields are mandatory for adding product.</string>
+    <string name="no_change_in_data">No change in data fields for the product.</string>
+
+    <string name="price_asc">Price Asc</string>
+    <string name="price_desc">Price Dsc</string>
+    <string name="name_asc">Name Asc</string>
+    <string name="name_desc">Name Desc</string>
+    <string name="category">Category</string>
+</resources>

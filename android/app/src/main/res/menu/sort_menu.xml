@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/category"
+        android:title="@string/category" />
+    <item android:id="@+id/name_asc"
+        android:title="@string/name_asc" />
+    <item android:id="@+id/name_desc"
+        android:title="@string/name_desc" />
+    <item android:id="@+id/price_asc"
+        android:title="@string/price_asc" />
+    <item android:id="@+id/price_desc"
+        android:title="@string/price_desc" />
+</menu>
