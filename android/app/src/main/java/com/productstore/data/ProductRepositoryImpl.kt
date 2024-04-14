@@ -19,19 +19,19 @@ class ProductRepositoryImpl @Inject constructor(
             val response = apiInterface.fetchProduct()
             productDao.deleteProducts()
             productDao.insertProducts(response)
-            emit(productDao.getProductList())
+            val list = productDao.getProductList()
+            emit(list)
         }.flowOn(Dispatchers.IO)
     }
 
     override fun updateProduct(product: ProductEntity): Flow<Boolean> {
         return flow {
-            val responseBody = if (product.id == 0) {
+            val response = if (product.id == -1) {
                 apiInterface.createProduct(product)
             } else {
                 apiInterface.updateProduct(product.id, product)
             }
-            if (responseBody.isSuccessful) emit(true)
-            else emit(false)
+            emit(response)
         }.flowOn(Dispatchers.IO)
     }
 }

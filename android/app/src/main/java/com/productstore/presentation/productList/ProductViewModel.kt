@@ -58,8 +58,8 @@ class ProductViewModel @Inject constructor(
             oldProduct.name != newProduct.name
                     || oldProduct.description != newProduct.description
                     || oldProduct.category != newProduct.category
-                    || oldProduct.price != newProduct.price
                     || oldProduct.image != newProduct.image
+                    || oldProduct.price != newProduct.price
         }
     }
 

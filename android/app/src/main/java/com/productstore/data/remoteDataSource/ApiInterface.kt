@@ -18,10 +18,10 @@ interface ApiInterface {
     suspend fun updateProduct(
         @Path("id") id: Int,
         @Body productEntity: ProductEntity
-    ): Response<ResponseBody>
+    ): Boolean
 
     @POST("/products")
     suspend fun createProduct(
         @Body productEntity: ProductEntity
-    ): Response<ResponseBody>
+    ): Boolean
 }
